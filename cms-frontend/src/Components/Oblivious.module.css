@@ -1,0 +1,19 @@
+.workSpace{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    grid-template-rows: 1fr 10fr;
+    /* background-color: antiquewhite; */
+}
+
+/* .workSpace>*:nth-child(2){
+    width: 100vw;
+    grid-column: 1 / -1;
+    height: 100%;
+} */
+
+p{
+    text-align:center
+}
+
