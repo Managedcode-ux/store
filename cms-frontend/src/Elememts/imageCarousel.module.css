@@ -2,19 +2,53 @@
     box-sizing: border-box;
 }
 
-/* slide-show styles */
+/* slide-show continer styles */
 .container {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* border: 4px solid orange; */
+    /* border: 2px solid orange; */
     width: fit-content;
     border-radius: 15px;
     padding: 0px;
 }
 
+/* Modal and product image container styles */
+.myImgContiner {
+    /* flex basis sets the height here*/
+    flex: 1 1 450px;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 4px;
+    position: relative; /*set to relative to attach the numbering to this container*/
+    -webkit-box-shadow: -1px 8px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 8px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 8px 21px -9px rgba(0, 0, 0, 0.75);
+}
+
+.myImgContiner > img {
+    /* border-top-left-radius: 15px; */
+    /* border-top-right-radius: 15px; */
+    border-radius: 10px;
+}
+
+.myImgContiner:hover {
+    opacity: 0.8;
+}
+
 .disabledSlides {
     display: none;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 .cursor {
@@ -47,14 +81,6 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .captionContainer {
     text-align: center;
     background-color: #222;
@@ -65,7 +91,7 @@
 /* Six Columns side by side */
 .PreviewContainer {
     display: flex;
-    flex: 0.3 0 60px;
+    flex: 0.3 0 70px;
     max-width: 400px;
     gap: 6px;
     padding: 2px;
@@ -81,6 +107,10 @@
     border-radius: 10px;
     scrollbar-width: thin;
     scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+    margin-bottom: 10px;
+    -webkit-box-shadow: -1px 8px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 8px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 8px 21px -9px rgba(0, 0, 0, 0.75);
 }
 
 /* Add a transparency effect for thumbnail images */
@@ -91,29 +121,6 @@
 .active,
 .demo:hover {
     opacity: 1;
-}
-
-/* modal styles */
-
-.myImgContiner {
-    /* flex basis sets the height here*/
-    flex: 1 1 450px;
-    max-width: 400px;
-    min-width: 300px;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 4px;
-}
-
-.myImgContiner > img {
-    /* border-top-left-radius: 15px; */
-    /* border-top-right-radius: 15px; */
-    border-radius: 15px;
-}
-
-.myImgContiner:hover {
-    opacity: 0.8;
 }
 
 /* modal background */
