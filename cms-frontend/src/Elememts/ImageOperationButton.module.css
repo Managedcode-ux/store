@@ -1,0 +1,59 @@
+.OperationContainer {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    gap: 20rem;
+    /* border: 1px solid red; */
+}
+
+.deleteAllBttn {
+    line-height: 1;
+    padding: 0.1rem;
+}
+
+.IconTooltipContainer {
+    position: relative;
+    /* display: inline-block; */
+    /* border: 2px solid orange; */
+    height: fit-content;
+    width: fit-content;
+}
+
+.MicroscopicOps {
+    display: flex;
+    gap: 10px;
+}
+
+.Spoiler {
+    position: absolute;
+    visibility: hidden;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    background-color: gray;
+    line-height: 1;
+    opacity: 0.6;
+}
+
+.Spoiler::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+}
+
+.IconTooltipContainer:hover .Spoiler {
+    visibility: visible;
+}
+
+.Icon {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}

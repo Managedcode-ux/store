@@ -1,7 +1,6 @@
 // import img_woods_wide from   "../assets/img_woods_wide.jpg"
 import { useEffect, useState, useRef, useCallback } from "react";
 import styles from "./imageCarousel.module.css";
-import { IconTrash, IconReplace } from "@tabler/icons-react";
 
 type ImageMap = Map<number, HTMLElement>;
 
@@ -61,11 +60,6 @@ export default function Carousel() {
 
   return (
     <div className={styles.container}>
-      {/* Operations */}
-      <div style={{ display: "flex", gap: "2px" }}>
-        <IconTrash />
-        <IconReplace />
-      </div>
       {/* Image */}
       {slides.map((slide, index) => (
         <div
